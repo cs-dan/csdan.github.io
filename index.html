@@ -5,82 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>cs-dan | Portfolio</title>
   
-<style>
-    :root {
-      --bg-color: #121212;
-      --text-color: #f0f0f0;
-      --accent-color: #1f1f1f;
-    }
-
-    body.light {
-      --bg-color: #f0f0f0;
-      --text-color: #121212;
-      --accent-color: #ffffff;
-    }
-
+  <style>
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
     }
 
     header {
+      padding: 20px 40px;
+      background-color: #1e1e1e;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      border-bottom: 2px solid #333;
     }
 
-    .toggle-container {
-      display: flex;
-      gap: 1rem;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
     }
 
-    .toggle-button {
-      border: 1px solid var(--text-color);
-      background-color: transparent;
-      color: var(--text-color);
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #ccc;
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      transition: transform 0.2s ease;
+      border-radius: 4px;
     }
 
-    .toggle-button:hover {
-      background-color: var(--accent-color);
-    }
-
-    main {
-      text-align: center;
-      padding: 5rem 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .nav-item {
-      border: 1px solid var(--text-color);
-      padding: 0.75rem 1.5rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s, background-color 0.3s;
-    }
-
-    .nav-item:hover {
+    nav a:hover {
+      background-color: #2a2a2a;
       transform: translateX(5px);
-      background-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    .language-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #2a2a2a;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      z-index: 1000;
+    }
+
+    .language-toggle:hover {
+      background-color: #444;
+    }
+
+    .main-content {
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+      color: #aaaaaa;
     }
   </style>
   
