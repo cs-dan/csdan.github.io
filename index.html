@@ -45,7 +45,7 @@
       color: #ffffff;
     }
 
-    .language-toggle {
+    .item-toggle {
       position: fixed;
       top: 20px;
       right: 20px;
@@ -58,7 +58,7 @@
       z-index: 1000;
     }
 
-    .language-toggle:hover {
+    .item-toggle:hover {
       background-color: #444;
     }
 
@@ -85,19 +85,14 @@
 <body>
   <header>
     <div class="logo">cs-dan</div>
-    <div class="toggle-container">
-      <button class="toggle-button" id="lang-toggle">EN</button>
-      <button class="toggle-button" id="theme-toggle">☀️</button>
-    </div>
     <nav>
       <a href="blog.html">Blog</a>
       <a href="projects.html">Projects</a>
     </nav>
   </header>
 
-  <div class="toggle-container">
-    <button class="toggle-button" id="lang-toggle">EN</button>
-  </div>
+  <div class="item-toggle" id="language_toggle">EN</div>
+  <div class="item-toggle" id=theme_toggle">☀️</div>
   
   <div class="main-content">
     <h1 id="mainTitle">Welcome to My Portfolio</h1>
@@ -107,20 +102,23 @@
   </div>
 
   <script>
-    const toggle = document.getElementById('languageToggle');
+    const ThemeToggle = document.getElementById('theme_toggle');
+    const LangToggle = document.getElementById('language_toggle');
     const title = document.getElementById('mainTitle');
     const text = document.getElementById('mainText');
-
+    let darkMode = true;
+    let currentLang = 'EN';
+    
     let darkmode = True;
     let lang = 'en';
 
-    themeToggle.addEventListener('click', () => {
+    ThemeToggle.addEventListener('click', () => {
       document.body.classList.toggle('light');
       darkMode = !darkMode;
-      themeToggle.textContent = darkMode ? '☀️' : '🌙';
+      ThemeToggle.textContent = darkMode ? '☀️' : '🌙';
     });
 
-    toggle.addEventListener('click', () => {
+    LangToggle.addEventListener('click', () => {
       if (lang === 'en') {
         lang = 'jp';
         toggle.textContent = 'JP';
@@ -134,5 +132,6 @@
       }
     });
   </script>
+  
 </body>
 </html>
